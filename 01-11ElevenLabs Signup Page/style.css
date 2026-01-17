@@ -1,0 +1,140 @@
+body{
+
+
+font-family: "Roboto", sans-serif;
+                /* font-weight: 800; */
+                /* background: black; */
+                /* color: white; */
+                padding: 0;
+                margin: 0;
+
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#v-line{
+    width:2px;
+    height: 13px;
+    background-color: black;
+}
+.line{
+    display: flex;
+    gap: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.lab{
+    display: flex;
+     margin: 75px 0px 0px 0px;
+    margin-left: 185px;
+}
+
+.heading{
+    margin: 40px 0 0 0;
+    font-weight:600;
+    font-style:normal;
+    font-size: 24px;
+    line-height: 30px; 
+    margin-left: 145px;
+}
+.sign-up{
+    display: flex;
+    gap: 130px;
+    margin: 30px 0 0 0;
+    border: 2px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 100px;
+    border-radius: 15px;
+    
+
+}
+.img{
+    height: 20px;
+    width: 20px;
+}
+
+hr{
+    border:0;
+    height:1px;
+    background: #d0cccc;
+    margin-top: 20px;
+  
+}
+.email{
+    padding-top: 20px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.password{
+    padding-top: 20px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+
+}
+input{
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border: 1px solid rgb(220, 216, 216);
+    border-radius: 15px;
+    padding-left: 15px;
+}
+
+
+.sign-up-btn{
+    margin-top: 15px;
+    display:flex;
+    justify-content: center;
+    border: 1px solid rgba(136, 134, 134, 0.804);
+    padding-top:13px;
+    padding-bottom: 13px;
+    background-color: rgba(136, 134, 134, 0.804);
+    border-radius: 15px;
+    color: white
+}
+
+.registered{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    color: rgba(27, 27, 27, 0.804);
+    gap: 5px;
+}
+
+.sign-in{
+    text-decoration: underline rgba(27, 27, 27, 0.804);
+}
+
+.footer{
+    margin-top: 100px;
+    display: flex;
+    gap: 3px;
+}
+
+.footer div:nth-child(2) {
+    text-decoration: underline;
+}
+
+.footer div:nth-child(4) {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 768px) {
+  .lab {
+    display: none;
+  }
+}
+
+
