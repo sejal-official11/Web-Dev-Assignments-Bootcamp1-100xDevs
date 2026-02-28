@@ -5,34 +5,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-    body{
-        font-family: 'Roboto', sans-serif;
-    }
-</style>
-
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css">
     <title>Contact Sales</title>
 
 </head>
 
 <body style="margin:0; padding:0;">
-    <div style="min-height: 100vh; display:flex; ">
-        <div style="background-color: rgb(28, 28, 28); flex:1; color:rgb(229, 229, 229);">
-            <div>IIElevenLabs</div>
-            <div>Contact our sales team</div>
-            <div>
-                <div>Custom pricing and elevated concurrency</div>
-                <div>Enterprise-grade security including SOC II, GDPR and HIPAA compliance</div>
-                <div>Enterprise support and SLAs</div>
+    <div style="min-height: 100vh; display:flex;">
+        <div
+            style="background-color: rgb(28, 28, 28); flex:1; color:rgb(229, 229, 229); padding-top: 50px; padding-left: 50px;">
+            <div style="font-size: larger; font-weight:bold;">IIElevenLabs</div>
+            <div style="font-size: 40px; padding-top: 50px;">Contact our sales team</div>
+            <div
+                style="padding-top: 20px; padding-left: 10px; display: flex; flex-direction: column; gap: 15px; font-size: 17px;">
+                <div style="display: flex; gap: 15px;">
+                    <img style="height: 20px;" src="./images/rocket.svg" alt="">
+                    <div>
+                        Custom pricing and elevated concurrency
+                    </div>
+                </div>
+                <div style="display: flex; gap: 15px;">
+                    <img style="height: 20px;" src="./images/shield.svg" alt="">
+                    <div>
+                        Enterprise-grade security including SOC II, GDPR and HIPAA compliance</div>
+                </div>
+                <div style="display: flex; gap: 15px;">
+                    <img style="height: 20px;" src="./images/building.svg" alt="">
+                    <div>
+                        Enterprise support and SLAs</div>
+                </div>
             </div>
-            <div>Trusted by 10,000+ leading businesses</div>
-            <div>Images</div>
-            <div>4.5 stars and 1,059+ reviews</div>
-            
+            <div
+                style=" font-weight:400; font-size:14px; padding-left: 10px; padding-top: 30px; color: rgb(148,148,148); ">
+                Trusted by 10,000+ leading businesses</div>
+            <div style="padding-top: 20px; padding-left: 30px; display:flex; gap: 20px; height: 40px; width:100px;">
+                <img src="./images/cisco-white.svg" alt="">
+                <img src="./images/deutsche-telekom-white.svg" alt="">
+                <img src="./images/walt-disney-studios-white.svg" alt="">
+                <img src="./images/nvidia-white.svg" alt="">
+                <img src="./images/salesforce-white.svg" alt="">
+
+            </div>
+            <div style="padding-top: 20px;">4.5 stars and 1,059+ reviews</div>
+
         </div>
-        <div style="background-color: white; flex:1;">Hi</div>
+
+        <div style="background-color:white; flex:1; min-height: 100vh;">
+            <form  style="margin-top: 200px; margin-left: 100px;">
+                <div style="display:flex; flex-direction:column; gap: 10px;">
+                    <div style="font-size: 40px; font-weight: normal; ">Contact sales form</div>
+                    <div style="color:rgb(130, 130, 130)">Please fill out the form below to get started</div>
+                </div>
+                <div style="margin-top: 20px; ">
+                    <div >
+                        <div>
+                            <label for="website" >Company Website</label>
+                        </div>
+                        <input type="text" placeholder="elevenlabs.io">
+                    </div>
+                    <div>
+                        <div>
+                            <label for="email">Business Email</label>
+                        </div>
+                        <input type="email" placeholder="example@elevenlabs.io">
+                    </div>
+                </div>
+            </form>
+        </div>
+
     </div>
 
 </body>
