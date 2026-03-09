@@ -1,28 +1,39 @@
 <html>
-    <script>
+
+<script>
+    async function add() {
+        let a = document.getElementById('first').value;
+        let b = document.getElementById('second').value;
 
 
-
-
-
-        const res = await fetch("http://localhost:3002/sum/" + a + "/" + b);
+        const res = await fetch("http://localhost:3002/sum/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                a: a,
+                b: b
+            })
+        },);
         const json = await res.json();
-        document.getElementById("response").innerHTML = json.data;
-    </script>
-    <body>
-        <input id="first" type="text" placeholder="first number"/>
-        <input id="second" type="text" placeholder="second number"/>
+        document.getElementById("response").innerHTML = json.ans;
+    }
+
+</script>
+
+<body>
+
+    <input id="first" type="text" placeholder="first number" />
+    <input id="second" type="text" placeholder="second number" />
+
+    <button onClick="add()">Add<button>
+            <button>Sub</button>
+            <button>Mul</button>
+            <button>Div</button>
 
 
-fetch("http://localhost:3002/sum/" + a + "/" + b);
+            <div id="response"></div>
+</body>
 
-        <button onClick="add()">Add<button>
-        <button>Sub</button>
-        <button></button>
-        <button></button>
-
-
-
-        <div id="response"></div>
-    </body>
 </html>
