@@ -1,19 +1,13 @@
 const express = require("express");
 const jwt = require("jsonwebtoken");
+const {authMiddleware} = require("../middleware")
 const app = express();
 app.use(express.json());
 
+
+
 const notes = [];
-const user = [
-  {
-    username: "sejal123",
-    password: "123123",
-  },
-  {
-    username: "selin321",
-    password: "123321",
-  },
-];
+const user = [];
 
 app.post("/signup", (req, res) => {
   const username = req.body.username;
@@ -60,26 +54,10 @@ app.post("/signin", (req, res) => {
 });
 
 // authenticated endpoint
-app.post("/notes", (req, res) => {
+app.post("/notes", authMiddleware, (req, res) => {
   // check if they have sent the right header
-  const token = req.headers.token;
-  if (!token) {
-    res.status(403).send({
-      message: "You are not logged in",
-    });
-    return;
-  }
 
-  const decoded = jwt.verify(token, "sejal123");
-  const username = decoded.username;
-
-  if (!username) {
-    res.status(403).json({
-      message: "malformed token",
-    });
-    return;
-  }
-
+  const username = req.username;
   const note = req.body.note;
   notes.push({ note, username });
   res.json({
@@ -88,25 +66,7 @@ app.post("/notes", (req, res) => {
 });
 
 // authenticated endpoint
-app.get("/notes", (req, res) => {
-  const token = req.headers.token;
-
-  if (!token) {
-    res.status(403).send({
-      message: "You are not logged in",
-    }); 
-    window.location.href = "/login";
-  }
-
-  const decoded = jwt.verify(token, "sejal123");
-  const username = decoded.username;
-
-  if (!username) {
-    res.status(403).json({
-      message: "malformed token",
-    });
-    return;
-  }
+app.get("/notes", authMiddleware, (req, res) => {
 
   const userNotes = notes.filter((note) => notes.username === username);
   res.json({
